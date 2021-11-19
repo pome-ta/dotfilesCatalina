@@ -1,3 +1,4 @@
+```
 % >brew list
 ==> Formulae
 anyenv			libyaml			pkg-config
@@ -23,4 +24,4 @@ docker			processing		vivaldi
 figma			pycharm-ce		zoom
 gimp			runjs
 github			slack
-
+```
