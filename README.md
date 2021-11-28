@@ -27,3 +27,12 @@ anyenv も少し腰がひけてる
 
 日本語入力は、Google 日本語入力を卒業！
 
+
+### GitHub ssh 接続
+
+[Macで一番シンプルなGitHub SSH接続方法](https://shibaemon.com/mac-github-ssh/) ちょっと更新が古いけど、ざっくりとできそうだったので
+
+
+
+
+
