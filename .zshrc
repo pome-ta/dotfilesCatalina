@@ -21,20 +21,29 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias ll="ls -GFa"
 function chpwd() { ll }
 
+
+
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{magenta}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+
+# プロンプトカスタマイズ 今度ちゃんと書く
+#PROMPT='
+#[%B%F{red}%n@%m%f%b:%F{green}%~%f]%F{cyan}$vcs_info_msg_0_%f
+#%F{yellow}$%f '
+
 PROMPT="
 %T%{${fg[cyan]}%}[%n]%{${reset_color}%}%d
 %# %{${fg[cyan]}%}>%{${reset_color}%}"
 
-export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-eval "$(pyenv init -)"
 
+export PATH=/usr/local/bin/git:$PATH
+eval "$(anyenv init -)"
+export PATH="$HOME/.anyenv/bin:$PATH"
 
-
-
-fpath=(~/.zsh/completion $fpath)
-zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
-autoload -Uz compinit && compinit -i
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
