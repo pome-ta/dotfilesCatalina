@@ -2,7 +2,6 @@
 "set bg=light
 set bg=dark
 
-
 set encoding=utf-8
 scriptencoding utf-8
 syntax enable
@@ -19,6 +18,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+Plug 'tikhomirov/vim-glsl'
 Plug 'cocopon/iceberg.vim'
 
 call plug#end()
@@ -76,8 +76,8 @@ set ambiwidth=double
 set list
 
 set listchars=tab:»-,trail:-,nbsp:%
-set listchars+=space:∙
-
+"set listchars+=space:∙
+set listchars+=space:･
 
 " #--- StatusLine 処理系
 "常に Status Line を表示する
@@ -143,4 +143,3 @@ imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 noremap PP "0p
 noremap x "_x
-

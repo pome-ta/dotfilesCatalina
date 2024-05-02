@@ -47,3 +47,5 @@ eval "$(anyenv init -)"
 export PATH="$HOME/.anyenv/bin:$PATH"
 
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+
+eval "$(pyenv init --path)"
