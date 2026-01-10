@@ -65,3 +65,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
+zinit light zsh-users/zsh-autosuggestions
+zinit load zdharma/fast-syntax-highlighting
